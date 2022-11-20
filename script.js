@@ -36,7 +36,6 @@ document.getElementById("overlay").classList.add("disappear");
 document.getElementById("cart-menu").classList.add("disappear");
 document.getElementById("fullscreen").classList.add("disappear");
 document.getElementById("cart-item").classList.add("disappear");
-// document.getElementById("link-list").classList.add("disappear");
 
 function setMainSlide(n, element) {
     let mainSlide;
