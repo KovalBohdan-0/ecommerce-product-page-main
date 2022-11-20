@@ -14,7 +14,7 @@
 
 ### Screenshot
 
-![](./design/screenshot.png)
+![](./design/screenshot.jpg)
 
 ### Links
 
@@ -34,7 +34,7 @@
 ### Useful resources
 
 - [Flexbox guide](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
-- [JS light box] (https://www.w3schools.com/howto/howto_js_lightbox.asp)
+- [JS light box](https://www.w3schools.com/howto/howto_js_lightbox.asp)
 
 ## Author
 
