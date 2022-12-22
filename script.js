@@ -37,7 +37,7 @@ document.getElementById("cart-menu").classList.add("disappear");
 document.getElementById("fullscreen").classList.add("disappear");
 document.getElementById("cart-item").classList.add("disappear");
 
-function setMainSlide(n, element) {
+const setMainSlide = (n, element) => {
     let mainSlide;
 
     //Using images button
@@ -74,7 +74,7 @@ function setMainSlide(n, element) {
     slideNum = n;
 }
 
-function openPreview() {
+const openPreview = () => {
     if (window.innerWidth > 900) {
         previewSlideNum = slideNum;
         document.getElementsByClassName("overlay")[0].classList.remove("disappear");
@@ -90,14 +90,14 @@ function openPreview() {
     }
 }
 
-function closeFullscreen() {
+const closeFullscreen = () => {
     slideNum = previewSlideNum;
     setMainSlide(slideNum);
     document.getElementsByClassName("overlay")[0].classList.add("disappear");
     document.getElementById("fullscreen").classList.add("disappear");
 }
 
-function previousSlide() {
+const previousSlide = () => {
     if (slideNum > 1) {
         slideNum--;
     } else {
@@ -107,7 +107,7 @@ function previousSlide() {
     setMainSlide(slideNum);
 }
 
-function nextSlide() {
+const nextSlide = () => {
     if (slideNum < 4) {
         slideNum++;
     } else {
@@ -117,19 +117,19 @@ function nextSlide() {
     setMainSlide(slideNum);
 }
 
-function addItem() {
+const addItem = () => {
     itemsToAdd++;
     document.getElementById("items-to-add").innerHTML = itemsToAdd;
 }
 
-function removeItem() {
+const removeItem = () => {
     if (itemsToAdd > 0) {
         itemsToAdd--;
         document.getElementById("items-to-add").innerHTML = itemsToAdd;
     }
 }
 
-function submitItems() {
+const submitItems = () => {
     if (itemsToAdd == 0) {
         alert("First add items to your cart");
     } else {
@@ -145,7 +145,7 @@ function submitItems() {
     }
 }
 
-function cartMenu() {
+const cartMenu = () => {
     if (!document.getElementById("cart-menu").classList.contains("disappear")) {
         document.getElementById("cart-menu").classList.add("disappear");
     } else {
@@ -153,21 +153,21 @@ function cartMenu() {
     }
 }
 
-function removeFromCart() {
+const removeFromCart = () => {
     itemsInCart = 0;
     document.getElementById("cart-item").classList.add("disappear");
     document.getElementById("cart-empty").classList.remove("disappear");
     document.getElementById("items-count").classList.add("disappear");
 }
 
-function checkout() {
+const checkout = () => {
     removeFromCart();
 }
 
-function exitMenu() {
+const exitMenu = () => {
     document.getElementById("link-list").style.display = "none";
 }
 
-function openMenu() {
+const openMenu = () => {
     document.getElementById("link-list").style.display = "flex";
 }
